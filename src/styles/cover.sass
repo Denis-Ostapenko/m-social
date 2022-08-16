@@ -21,64 +21,74 @@ $bottom-font-size: 14px
         max-width: 1440px
     &__images-container
         width: 100%
-        overflow-x: hidden
         display: flex
         justify-content: center
-        padding-bottom: 19px
+        height: 413.2229309082031px
+        min-width: calc(100vw + 79.169%)
+        margin-top: -125px
+        z-index: 80
+        border-radius: 50%
+        overflow: hidden
+        background: $background
+        @media (min-width: $screen-md)
+            height: 600px
+        @media (min-width: $screen-xl)
+            padding-bottom: 19px
+            margin-top: -390px
+            min-width: calc( 100vw + 20.069% )
+            outline: 18px solid #FFCD00
+            height: 1106px
     &__images
         display: flex
         position: relative
-        height: 413.2229309082031px
-        min-width: 645.98779296875px
-        border-radius: 50%
-        background: $background
+        height: 288px
+        width: 360px
         background-image: url('../assets/img/background.png')
-        background-position: 23% bottom
+        background-position: 95% bottom
         background-repeat: no-repeat
-        background-size: auto 49%
+        background-size: 120% auto
         justify-content: center
-        margin-top: -125px
+        margin-top: 125px
         @media (min-width: $screen-md)
-            margin-top: -125px
-            height: 600px
-            min-width: 937px
-            background-position: 40% bottom
-            background-size: 76% auto
+            margin-top: 125px
+            height: 475px
+            min-width: 640px
+            background-position: 106% bottom
+            background-size: 115% auto
             @media (min-width: $screen-xl)
-                margin-top: -390px
-                min-width: 1729px
-                height: 1106px
-                background-position: 34% bottom
+                margin-top: 390px
+                width: 1440px
+                height: 716px
+                background-position: left bottom
                 background-size: auto
-                outline: 18px solid $background
     &__img-boy
         display: block
         position: relative
-        height: 227px
-        top: 154px
-        left: -2px
+        height: 217px
+        top: 44px
+        left: -4px
         @media (min-width: $screen-md)
             height: 400px
-            top: 160px
-            left: 18px
+            top: 33px
+            left: -10px
             @media (min-width: $screen-xl)
-                top: 471px
+                top: 81px
                 left: -121px
                 height: 559.23px
     &__img-cheese
         display: block
         width: 197.5px
         position: absolute
-        left: 160px
-        top: 156px
+        left: 17px
+        top: 41px
         transform: rotate(-2.53deg)
         @media (min-width: $screen-md)
             width: 351px
-            left: 172px
-            top: 146px
+            left: 0px
+            top: 45px
             @media (min-width: $screen-xl)
-                left: 286px
-                top: 413px
+                left: 144px
+                top: 21px
                 width: 558.55px
     &__button
         display: flex

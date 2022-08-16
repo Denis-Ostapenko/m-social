@@ -35,6 +35,7 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader',
                 ],
             },
@@ -76,6 +77,7 @@ module.exports = {
                 { from: "assets/img", to: "assets/img" }
             ]
         }),
+        require('autoprefixer')
     ],
     optimization: optimization(),
 };
