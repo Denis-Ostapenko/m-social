@@ -19,11 +19,17 @@ $bottom-font-size: 14px
     @media (min-width: $screen-xl)
         width: 100%
         max-width: 1440px
+    &__images-container
+        width: 100%
+        overflow-x: hidden
+        display: flex
+        justify-content: center
+        padding-bottom: 19px
     &__images
         display: flex
         position: relative
         height: 413.2229309082031px
-        width: 645.98779296875px
+        min-width: 645.98779296875px
         border-radius: 50%
         background: $background
         background-image: url('../assets/img/background.png')
@@ -35,12 +41,12 @@ $bottom-font-size: 14px
         @media (min-width: $screen-md)
             margin-top: -125px
             height: 600px
-            width: 937px
+            min-width: 937px
             background-position: 40% bottom
             background-size: 76% auto
             @media (min-width: $screen-xl)
                 margin-top: -390px
-                width: 1729px
+                min-width: 1729px
                 height: 1106px
                 background-position: 34% bottom
                 background-size: auto
@@ -90,8 +96,8 @@ $bottom-font-size: 14px
         text-decoration: none
         background: $bg-bottom
         border-radius: 29px
-        border: 6px solid
-        margin: -20px auto 84px $border-bottom
+        border: 6px solid $border-bottom
+        margin: -20px auto 84px
         filter: drop-shadow(0px 0px 37px $bottom-ds)
         transition: background 0.5s ease
         @media (min-width: $screen-md)
