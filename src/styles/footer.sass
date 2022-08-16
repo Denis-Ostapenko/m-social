@@ -1,0 +1,127 @@
+$screen-md: 640px
+$screen-xl: 1200px
+$background: #FFFFFF
+$text-font-size-mobile: 14px
+$text-font-size: 16px
+$phone-font-size-mobile: 30px
+$phone-font-size: 36px
+$copyright-font-size-mobile: 10px
+$copyright-font-size: 12px
+$color-link: #5A1404
+$color-link-hover: #E63000
+$phone-color: #E43219
+$bg-social-networks: #FFCD00
+
+.footer
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    position: relative
+    background: $background
+    padding: 24px 0 0
+    min-width: 320px
+    height: 253px
+    z-index: 120
+    @media (min-width: $screen-xl)
+        justify-content: space-between
+        flex-direction: row
+        align-items: flex-start
+        padding: 0 15px
+        width: 100%
+        height: 130px
+    &__info
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-left: 0
+        margin-top: 25px
+        order: 2
+        @media (min-width: $screen-xl)
+            order: 1
+            margin-left: auto
+            margin-top: 20px
+    &__title
+        font-size: $text-font-size-mobile
+        line-height: 18px
+        text-transform: uppercase
+        margin: 0
+        @media (min-width: $screen-xl)
+            font-size: $text-font-size
+            line-height: 21px
+    &__phone
+        font-weight: 500
+        font-size: $phone-font-size-mobile
+        line-height: 39px
+        color: $phone-color
+        text-decoration: none
+        @media (min-width: $screen-xl)
+            font-size: $phone-font-size
+            line-height: 48px
+        &:hover
+            opacity: 0.7
+    &__copyright
+        position: absolute
+        bottom: 0
+        font-weight: 400
+        font-size: $copyright-font-size-mobile
+        line-height: 21px
+        @media (min-width: $screen-xl)
+            font-size: $copyright-font-size
+            position: static
+    &__support
+        order: 1
+        display: flex
+        @media (min-width: $screen-xl)
+            display: block
+            order: 2
+            margin: 20px 163px 0 180px
+    &__support-item
+        font-weight: 500
+        font-size: $text-font-size-mobile
+        line-height: 21px
+        transition: color 0.5s ease
+        margin-right: 43px
+        text-decoration: none
+        color: $color-link
+        @media (min-width: $screen-xl)
+            font-size: $text-font-size
+            margin-right: 70px
+        &:last-child
+            margin-right: 0px
+        &:hover
+            color: $color-link-hover
+    &__social-networks
+        order: 3
+        margin-top: 17px
+        margin-top: 20px
+        display: flex
+        flex-direction: column
+        align-items: center
+        @media (min-width: $screen-xl)
+            margin-top: 20px
+            display: block
+            order: 3
+            margin-right: auto
+        & h3
+            font-weight: 400
+            font-size: $text-font-size
+            line-height: 21px
+            margin: 0 0 11px
+    &__social-networks-list
+        display: flex
+    &__social-networks-item
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 32px
+        height: 32px
+        padding: 0
+        background: $bg-social-networks
+        border-radius: 5px
+        margin-right: 10px
+        border: none
+        transition: scale 250ms ease
+        cursor: pointer
+        &:hover
+            transform: scale(1.1)

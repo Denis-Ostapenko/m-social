@@ -1,0 +1,214 @@
+$screen-md: 640px
+$screen-xl: 1200px
+$background: #FFFFFF
+$color-text: #FFFFFF
+$border-bottom: #ECB200
+$font-size-mobile: 16px
+$font-size-menu: 14px
+$color-links: #5A1404
+$color-links-hover: #E63000
+$bg-botton: #FFCD00
+$bg-botton-hover: #ECB200
+$color-menu: #5B1A0D
+$bg-menu: #FFCD00
+$color-links-menu: #5B1A0D
+$bg-social-networks: #ECB200
+
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    background: $background
+    padding: 0 15px
+    min-width: 320px
+    height: 62px
+    z-index: 120
+    @media (min-width: $screen-md)
+        padding: 0 20px
+        min-width: 640px
+        height: 72px
+    @media (min-width: $screen-xl)
+        padding: 0 15px
+        width: 100%
+        height: 82px
+    &__logo
+        order: 2
+        margin-left: 0
+        height: 21px
+        width: 135px
+        @media (min-width: $screen-md)
+            height: 23px
+            width: 150px
+        @media (min-width: $screen-xl)
+            order: 1
+            margin-left: auto
+            height: 27px
+            width: 170px
+    &__nav
+        display: none
+        flex-direction: column
+        justify-content: space-between
+        order: 2
+        border-bottom: 1px solid $border-bottom
+        padding: 0 10px
+        width: 100%
+        margin: 0
+        @media (min-width: $screen-xl)
+            display: flex
+            border: none
+            flex-direction: row
+            width: 352px
+            margin: 0 191px 0 225px
+            padding: 0
+    &__nav-item
+        margin-bottom: 20px
+        &:last-child
+            margin-bottom: 25px
+        @media (min-width: $screen-xl)
+            margin: 0
+            &:last-child
+                margin-bottom: 0
+    &__nav-item,&__log-in,&__registration, &__support-item
+        font-weight: 500
+        font-size: $font-size-mobile
+        line-height: 21px
+        text-decoration: none
+        text-transform: uppercase
+        color: $color-links
+        transition: color 0.5s ease
+    &__nav-item:hover,&__registration:hover, &__support-item:hover
+        color: $color-links-hover
+    &__authorization
+        order: 3
+        margin-left: auto
+        @media (min-width: $screen-md)
+            order: 3
+            margin-left: auto
+        @media (min-width: $screen-xl)
+            margin-left: 0
+            margin-right: auto
+    &__log-in
+        height: 32px
+        width: 78px
+        height: 32px
+        width: 78px
+        background: $bg-botton
+        border: none
+        border-radius: 29px
+        cursor: pointer
+        transition: background 0.5s ease
+        @media (min-width: $screen-md)
+            height: 35px
+            width: 90px
+            margin-right: 10px
+        @media (min-width: $screen-xl)
+            width: 120px
+            height: 40px
+            margin-right: 17px
+        &:hover
+            background: $bg-botton-hover
+    &__registration
+        display: none
+        @media (min-width: $screen-md)
+            display: inline
+            background: none
+            border: none
+            cursor: pointer
+            padding: 0
+    &__support,&__social-networks
+        display: none
+    &__menu-content
+        order: 2
+    &__menu
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 23px
+        height: 16px
+        cursor: pointer
+        order: 1
+        margin-right: 14px
+        &--active
+            width: 22px
+            height: 22px
+        @media (min-width: $screen-xl)
+            display: none
+        & > span
+            background: $color-menu
+            border-radius: 2px
+            width: 100%
+            height: 3px
+        &--active > span:first-child
+            transform: translateY(9.5px) matrix(0.71, 0.7, -0.71, 0.71, 0, 0)
+            border-radius: 1px
+            transition: 0.5s ease
+            height: 2.5px
+        &--active > span:nth-child(2)
+            opacity: 0
+            transition: 1s ease
+        &--active > span:last-child
+            transform: translateY(-9.5px) matrix(0.71, -0.7, 0.71, 0.71, 0, 0)
+            transition: 0.5s ease
+            border-radius: 1px
+            height: 2.5px
+    &__menu-content--active
+        position: absolute
+        z-index: 100
+        top: 62px
+        left: 0
+        right: 0
+        background: $bg-menu
+        padding: 25px 10px 35px
+        @media (min-width: $screen-md)
+            top: 72px
+        @media (min-width: $screen-xl)
+            position: relative
+            background: none
+            padding: 0
+            top: 0
+        .header__nav
+            display: flex
+        .header__support
+            display: flex
+            flex-direction: column
+            margin-top: 20px
+            padding: 0 10px
+            border-bottom: 1px solid $border-bottom
+            @media (min-width: $screen-xl)
+                display: none
+        .header__support-item
+            display: block
+            font-size: $font-size-menu
+            margin-bottom: 20px
+            &:last-child
+                margin-bottom: 25px
+        .header__social-networks
+            display: block
+            @media (min-width: $screen-xl)
+                display: none
+        .social-networks
+            & h3
+                font-weight: 400
+                font-size: $font-size-menu
+                line-height: 21px
+                color: $color-links-menu
+                display: block
+                margin: 25px 0 11px
+            &__list
+                display: flex
+            &__item
+                display: flex
+                align-items: center
+                justify-content: center
+                width: 32px
+                height: 32px
+                padding: 0
+                margin-right: 10px
+                border-radius: 5px
+                border: none
+                background: $bg-social-networks
+                cursor: pointer
+                transition: scale 250ms ease
+                &:hover
+                    scale: 1.1

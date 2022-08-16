@@ -1,0 +1,69 @@
+
+$screen-md: 640px
+$screen-xl: 1200px
+$background: #00000075
+$bg-container: #fff
+$color-border-bottom: #EDEDED
+$color-text: #5A1404
+$text-font-size: 16px
+.modal
+    display: none
+    position: fixed
+    width: 100vw
+    height: 100vh
+    z-index: 9999
+    align-items: center
+    justify-content: center
+    top: 0
+    background: $background
+    &__show
+        display: flex
+    &__container
+        background: $bg-container
+        min-width: 300px
+        min-height: 150px
+        padding: 10px 0
+        border-radius: 12px
+        @media (min-width: $screen-xl)
+            min-width: 400px
+            min-height: 150px
+    &__header
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        width: 100%
+        height: 30px
+        padding: 0px 20px 10px
+        border-bottom: 1px solid $color-border-bottom
+    &__main
+        display: flex
+        width: 100%
+        height: 80px
+        padding: 0px 20px
+        border-bottom: 1px solid $color-border-bottom
+    &__footer
+        display: flex
+        width: 100%
+        padding: 0px 20px
+    &__close
+        font-weight: 500
+        border: none
+        font-size: 0px
+        width: 20px
+        height: 20px
+        background: none
+        background-image: url('../assets/img/close.svg')
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        text-transform: uppercase
+        cursor: pointer
+        color: $color-text
+        transition: scale 250ms ease
+        @media (min-width: $screen-xl)
+            width: auto
+            height: auto
+            font-size: $text-font-size
+            background: none
+        &:hover
+            transform: scale(1.1)

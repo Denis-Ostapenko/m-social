@@ -1,0 +1,113 @@
+$screen-md: 640px
+$screen-xl: 1200px
+$background: linear-gradient(180.05deg, #EDEDED 22.63%, #FFFFFF 99.95%)
+$title-font-size: 30px
+$title-color: #5A1404
+$bg-pagination: #5B1A0D
+$border-pagination: #5B1A0D
+.products
+    display: flex
+    flex-direction: column
+    align-items: center
+    position: relative
+    padding-bottom: 50px
+    width: 100%
+    background: $background
+    @media (min-width: $screen-xl)
+        padding-bottom: 100px
+    &__title
+        font-weight: 500
+        font-size: $title-font-size
+        line-height: 46px
+        text-transform: uppercase
+        color: $title-color
+        margin-top: 66px
+        margin-bottom: 23px
+        @media (min-width: $screen-xl)
+            font-size: 36px
+            margin-top: 36px
+            margin-bottom: 13px
+    &__twisted
+        position: absolute
+        top: -23px
+        left: 55px
+        @media (min-width: $screen-xl)
+            left: 235px
+    &__container
+        position: relative
+        height: 332px
+        width: 360px
+        @media (min-width: $screen-md)
+            width: 640px
+        @media (min-width: $screen-xl)
+            height: 428px
+            width: 1030px
+    &__img
+        display: block
+        width: 141.63px
+        height: 218.17px
+        @media (min-width: $screen-xl)
+            width: 198px
+            height: 305px
+    &__swiper-slide
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+        width: 142px
+        height: 272px
+        @media (min-width: $screen-xl)
+            height: 362px
+        &:nth-child(2n)
+            & img
+                width: 128.04px
+                height: 198.14px
+                @media (min-width: $screen-xl)
+                    height: 277px
+                    width: 179px
+            & p
+                margin-top: 22px
+        & p
+            margin: 0
+            margin-top: 11px
+        & span
+            display: block
+    &__button-prev
+        display: none
+        @media (min-width: $screen-xl)
+            display: block
+            position: absolute
+            top: 37%
+            left: -50px
+            transform: rotate(180deg)
+            cursor: pointer
+
+    &__button-next
+        display: none
+        @media (min-width: $screen-xl)
+            display: block
+            position: absolute
+            top: 37%
+            right: -50px
+            cursor: pointer
+
+    &__button--disabled
+        opacity: 0.2
+    &__swiper-pagination
+        display: flex
+        justify-content: center
+    &__pagination-bullet
+        width: 11px
+        height: 11px
+        border-radius: 50%
+        margin: 0 6.5px
+        background: $bg-pagination
+    &__pagination-bullet--active
+        border: 1px solid $border-pagination
+        background: none
+
+.swiper .swiper-wrapper
+    height: auto
+.swiper
+    width: 100%
+    height: 100%

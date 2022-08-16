@@ -1,0 +1,30 @@
+@import ~normalize.css
+@import ./header
+@import ./main
+@import ./cover
+@import ./promotion
+@import ./products
+@import ./footer
+@import ./modal
+$background: #FFCD00
+$color-text: #5A1404
+@font-face
+    font-family: "PF Din Text Cond Pro"
+    src: url("../assets/fonts/PFDinTextCondPro-Medium.ttf") format("opentype"), url("../assets/fonts/pfdintextcondpro-medium.woff2") format("woff2"), url("../assets/fonts/pfdintextcondpro-medium.woff") format("woff"),
+    font-style: normal
+    font-weight: 500
+@font-face
+    font-family: "PF Din Text Cond Pro"
+    src: url("../assets/fonts/PFDinTextCondPro-Regular.ttf") format("opentype"), url("../assets/fonts/pfdintextcondpro-regular.woff2") format("woff2"), url("../assets/fonts/pfdintextcondpro-regular.woff") format("woff"),
+    font-style: normal
+    font-weight: 400
+
+*
+    box-sizing: border-box
+body
+    font-family: 'PF Din Text Cond Pro'
+    font-style: normal
+    background: $background
+    color: $color-text
+html::-webkit-scrollbar
+    display: none
