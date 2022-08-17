@@ -80,6 +80,7 @@ $bg-social-networks: #ECB200
     &__nav-item:hover,&__registration:hover, &__support-item:hover
         color: $color-links-hover
     &__authorization
+        display: flex
         order: 3
         margin-left: auto
         @media (min-width: $screen-md)
@@ -89,6 +90,11 @@ $bg-social-networks: #ECB200
             margin-left: 0
             margin-right: auto
     &__log-in
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+        padding-top: 2px
         height: 32px
         width: 78px
         height: 32px
@@ -111,7 +117,7 @@ $bg-social-networks: #ECB200
     &__registration
         display: none
         @media (min-width: $screen-md)
-            display: inline
+            display: block
             background: none
             border: none
             cursor: pointer
